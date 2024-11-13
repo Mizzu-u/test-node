@@ -4,16 +4,18 @@
 // const { promisify } = require('node:util')
 // const readFilePromise = promisify(fs.readFile)
 
+//es diferente hacerlo sincrono, asincrono secuencial y asincrono en paralelo
+
 const { readFile } = require("node:fs/promises");
 
 async function init() {
   console.log("Leyendo el primer archivo...");
-  const text = await readFile("./archivo.txt", "utf-8");
+  const text = await readFile("./log.txt", "utf-8");
   console.log("primer texto:", text);
   console.log("--> Hacer cosas mientras lee el archivo...");
 
   console.log("Leyendo el segundo archivo...");
-  const secondText = await readFile("./archivo2.txt", "utf-8");
+  const secondText = await readFile("./log2.txt", "utf-8");
   console.log("segundo texto:", secondText);
 }
 

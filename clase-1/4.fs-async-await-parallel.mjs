@@ -6,7 +6,9 @@
 
 import { readFile } from "node:fs/promises";
 
-Promise.all([readFile("./archivo.txt", "utf-8"), readFile("./archivo2.txt", "utf-8")]).then(([text, secondText]) => {
+Promise.all([readFile("./log.txt", "utf-8"), readFile("./log2.txt", "utf-8")]).then(([text, secondText]) => {
   console.log("primer texto:", text);
   console.log("segundo texto:", secondText);
 });
+
+//en pocas palabras el pararelo es donde se hace dos procesos al mismo tiempo independientemente del orden
